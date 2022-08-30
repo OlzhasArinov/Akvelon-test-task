@@ -10,18 +10,26 @@ const SignUp = () => {
 
 
     const handleRegister = (email: string, password: string) => {
-        const auth = getAuth();
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(({user}) => {
-                console.log(user);
-                dispatch(setUser({
-                    email: user.email,
-                    id: user.uid,
-                    token: user.refreshToken,
-                }));
-                navigate('/');
-            })
-            .catch(console.error)
+        try {
+            const auth = getAuth();
+            createUserWithEmailAndPassword(auth, email, password)
+                .then(({user}) => {
+                    console.log(user);
+                    dispatch(setUser({
+                        email: user.email,
+                        id: user.uid,
+                        token: user.refreshToken,
+                    }));
+                    navigate('/');
+                })
+                .catch(
+                    error => {   
+                        alert(error.message);
+                        }
+                )
+        } catch(err){
+            alert(err);
+         }
     }
 
     return (
