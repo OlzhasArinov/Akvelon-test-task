@@ -7,7 +7,7 @@ const LoginPage = () => {
             <h2>Login</h2>
             <Login />
             <p className='text-white'>
-                Or <Link className='p-1' to="/register">register</Link>
+                Or <Link className='p-1' to="/register">Register</Link>
             </p>
         </div>
     )

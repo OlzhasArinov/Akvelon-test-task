@@ -12,7 +12,7 @@ function App() {
       {/* <Navigation /> */}
       <Routes>
         <Route path="/" element={<UsersPage />} />
-        <Route path="/user" element={<DetailedPage />} />
+        <Route path="/user/:id" element={<DetailedPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Form style */
+
 html {
   height: 100%;
 }
@@ -169,3 +172,4 @@ body {
     bottom: 100%;
   }
 }
+/*  */

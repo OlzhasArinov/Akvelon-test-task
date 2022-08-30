@@ -25,17 +25,17 @@ function UsersPage() {
     return isAuth ? (
         <>
             <nav className='h-[50px] flex justify-between items-center px-5 bg-gray-500 text-white'>
-                <span className='font-bold'>React 2022</span>
+                <Link to='/' className='font-bold'>Akvelon</Link>
 
                 <span>
-                    <Link to='/' className='mr-2'>Users</Link>
-                    <Link to='/user'>User</Link>
+                    <button
+                        onClick={()=> dispatch(removeUser())}
+                    >
+                        Log out from {email}
+                    </button>
                 </span>
             </nav>
-            <div className='container mx-auto max-w-2xl pt-5'>
-            <button
-                onClick={()=> dispatch(removeUser())}
-            >Log out from {email}</button>
+            <div className='container mx-auto max-w-2xl pt-5 text-white'>
 
                 {loading && <Loader />}
                 {error && <ErrorMessage error={error} />}
