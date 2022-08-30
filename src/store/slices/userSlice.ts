@@ -1,6 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit';
-import { AppDispatch } from '..';
-import { IUser } from '../../models';
 
 const initialState = {
     email: null,

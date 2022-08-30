@@ -15,12 +15,6 @@ interface UserDetailState {
   error: string
 }
 
-// const initialState: UserDetailState = {
-//   userDetail: null,
-//   loading: false,
-//   error: ''
-// }
-
 export const userDetailSlice = createSlice({
   name: 'userDetail',
   initialState,
