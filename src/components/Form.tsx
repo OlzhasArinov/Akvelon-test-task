@@ -11,25 +11,54 @@ const Form: FC<FormProps> = ({title, handleClick}) => {
 
 
     return (
-        <div>
-            <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="email"
-            />
-            <input
-                type="password"
-                value={pass}
-                onChange={(e) => setPass(e.target.value)}
-                placeholder="password"
-            />
-            <button
-                onClick={() => handleClick(email, pass)}
-            >
-                {title}
-            </button>
-        </div>
+        // <div>
+            <form>
+                <div className="user-box">
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        name=''
+                        required
+                    />
+                    <label>Email</label>
+                </div>
+                <div className="user-box">
+                    <input
+                        type="password"
+                        value={pass}
+                        onChange={(e) => setPass(e.target.value)}
+                        required
+                    />
+                    <label>Password</label>
+                </div>
+                <a href="#" onClick={() => handleClick(email, pass)}>
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                        {title}
+                </a>
+            </form>
+
+        //     {/* <input
+        //         type="email"
+        //         value={email}
+        //         onChange={(e) => setEmail(e.target.value)}
+        //         placeholder="email"
+        //     />
+        //     <input
+        //         type="password"
+        //         value={pass}
+        //         onChange={(e) => setPass(e.target.value)}
+        //         placeholder="password"
+        //     />
+        //     <button
+        //         onClick={() => handleClick(email, pass)}
+        //     >
+        //         {title}
+        //     </button>
+        // </div> */}
     )
 }
 

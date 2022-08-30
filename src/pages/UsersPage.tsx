@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ErrorMessage from '../components/ErrorMessage';
 import Loader from '../components/Loader';
-import Navigation from '../components/Navigation';
 import User from '../components/User';
 import { useAppDispatch } from '../hooks/redux-hooks';
 import { useAuth } from '../hooks/use-auth';
@@ -25,12 +24,19 @@ function UsersPage() {
 
     return isAuth ? (
         <>
-            <Navigation />
+            <nav className='h-[50px] flex justify-between items-center px-5 bg-gray-500 text-white'>
+                <span className='font-bold'>React 2022</span>
+
+                <span>
+                    <Link to='/' className='mr-2'>Users</Link>
+                    <Link to='/user'>User</Link>
+                </span>
+            </nav>
             <div className='container mx-auto max-w-2xl pt-5'>
             <button
                 onClick={()=> dispatch(removeUser())}
             >Log out from {email}</button>
-            
+
                 {loading && <Loader />}
                 {error && <ErrorMessage error={error} />}
                 <div className='border py-2 px-4 rounded flex justify-center items-center flex-wrap mb-2'>

@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
     return (
-        <div>
-            <h1>Login</h1>
+        <div className='login-box'>
+            <h2>Login</h2>
             <Login />
-            <p>
-                Or <Link to="/register">register</Link>
+            <p className='text-white'>
+                Or <Link className='p-1' to="/register">register</Link>
             </p>
         </div>
     )
