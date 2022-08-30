@@ -10,7 +10,6 @@ import { removeUser } from '../store/slices/userSlice';
 function DetailedPage() {
     const params = useParams<'id'>()
     const dispatch = useAppDispatch()
-    // const {user, error, loading, id} = useUser()
     const {loading, userDetail, error} = useAppSelector(state => state.userDetailReducer)
       
     useEffect(() => {
